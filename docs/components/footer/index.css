@@ -1,0 +1,120 @@
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+body{
+  background-color: black;
+  font-family: SpoqaHanSans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 24px */
+  letter-spacing: -0.008px;
+  color: var(--gray-300, #ACACAC);
+}
+
+.footer {
+  padding: 46px, 50px;
+  margin: 0 auto;
+}
+
+.footer-inner {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 50px 200px;
+}
+
+.footer-line{
+  width: 1680px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  border-top: 2px solid #ACACAC;
+}
+
+.footer-qna {
+  display: flex;
+  font-size: 20px;
+  letter-spacing: -0.01px;
+  column-gap: 5px;
+  color: #C8C8C8;
+}
+
+.footer-wrapper-1 {
+  padding-top: 50px;
+}
+
+.guide {
+  padding-bottom: 46px;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: 20px;
+}
+
+.guide a{
+  text-decoration: none;
+  color: #ACACAC;
+}
+
+
+#footer-lang-select{
+  display: inline-block;
+  height: 43px;
+  appearance: none;
+  background: transparent;
+  color: #757575;
+  border: 1px solid var(--gray-500, #757575);
+  padding: 12px 35px;
+  border-radius: 2px;
+  background: url('./../../images/global.svg'), url('./../../images/toggle.svg');
+  background-position: 10% 50%, 90% 50%;
+  background-repeat: no-repeat;
+}
+
+.address { 
+  line-height: 1.5;
+  padding-top: 46px;
+  letter-spacing: -0.008px;
+  font-style: normal;
+  color: #919191;
+}
+
+.address span:first-child{
+  font-size: 22px;
+  line-height: 120%; /* 26.4px */
+  color: #ACACAC;
+}
+
+@media (max-width: 768px) {
+  .footer-qna {
+    display: flex;
+    flex-flow: column ;
+    column-gap: 2px;
+  }
+  
+  .guide {
+    white-space: nowrap;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    font-size: 14px;
+    line-height: 150%; /* 21px */
+    letter-spacing: -0.007px;
+  }
+
+  .address span:first-child{
+    font-size: 20px;
+    line-height: 150%; /* 30px */
+    letter-spacing: -0.01px;
+  }
+
+  .address span {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,100 @@
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+body{
+  background-color: black;
+  font-family: SpoqaHanSans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 24px */
+  letter-spacing: -0.008px;
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+  padding: 40px 200px;
+  width: 100%;
+}
+
+.header-inner{
+  width: clamp(700px, 76%, 1280px);
+  /* 평균 값 : 원하는 영역 / 전체 영역 * 100 */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0), url(./../../images/background-large.svg));
+}
+
+.brand {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.brand img {
+  width: 140px;
+  height: 38px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+select{
+  display: inline-block;
+  height: 40px;
+  appearance: none;
+  background: transparent;
+  color: #757575;
+  border: 1px solid var(--gray-500, #757575);
+  padding: 10px 34px;
+  border-radius: 2px;
+  background: url('./../../images/global.svg'), url('./../../images/toggle.svg');
+  background-position: 10% 50%, 90% 50%;
+  background-repeat: no-repeat;
+}
+
+.login{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  background: var(--red-500, #E50914);
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+@media (max-width: 768px){
+
+  .brand img{
+    width: 80px;
+    height: 22px;
+  }
+
+  #lang-select {
+    width: 105px;
+    height: 30px;
+    font-size: 12px;
+    padding: 5px 34px;
+  }
+
+  .login {
+    width: 60px;
+    height: 30px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+}
+
